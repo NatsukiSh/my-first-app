@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
     `
       p {
         color: #aa0757;
-        background: #374148;
-        border-radius: 8px;
+        background: #ffdefa;
         text-align: center;
       }
     `,

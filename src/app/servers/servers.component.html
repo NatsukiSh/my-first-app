@@ -14,3 +14,13 @@
 <p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+<input type="text" class="form-control" [(ngModel)]="userName" />
+<p>{{ userName }}</p>
+<button
+  class="btn btn-success"
+  [disabled]="!allowClickButton"
+  (click)="fillForm()"
+>
+  Reset
+</button>
