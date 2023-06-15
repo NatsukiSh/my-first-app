@@ -12,8 +12,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName = 'Testserver';
-  userName = 'Username';
+  serverName = 'Test server';
+  userName = '';
   allowClickButton = false;
 
   constructor() {
@@ -33,7 +33,8 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 
-  fillForm() {
-    this.allowClickButton = true;
+  resetForm() {
+    if ((this.allowClickButton = true)) {
+    }
   }
 }
