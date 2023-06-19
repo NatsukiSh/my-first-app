@@ -14,7 +14,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server was created!';
   serverName = 'Test server';
   userName = '';
-  allowClickButton = false;
+  allowUserNameReset = false;
 
   constructor() {
     setTimeout(() => {
@@ -33,8 +33,13 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 
-  resetForm() {
-    if ((this.allowClickButton = true)) {
+  enableResetUserName() {
+    if (this.userName != null) {
+      this.allowUserNameReset = true;
     }
+  }
+  resetFrom() {
+    this.userName = '';
+    this.allowUserNameReset = false;
   }
 }

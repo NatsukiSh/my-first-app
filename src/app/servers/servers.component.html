@@ -15,13 +15,18 @@
 <app-server></app-server>
 <app-server></app-server>
 
-<input type="text" class="form-control" [(ngModel)]="userName" />
+<input
+  type="text"
+  class="form-control"
+  (input)="enableResetUserName()"
+  [(ngModel)]="userName"
+/>
 <p>{{ userName }}</p>
 <button
   class="btn btn-success"
-  [disabled]="!allowClickButton"
   type="reset"
-  (click)="resetForm()"
+  (click)="resetFrom()"
+  [disabled]="!allowUserNameReset"
 >
   Reset
 </button>
