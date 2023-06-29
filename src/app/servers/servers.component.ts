@@ -17,6 +17,8 @@ export class ServersComponent implements OnInit {
   allowUserNameReset = false;
   serverCreated = false;
   servers = ['Testserver', 'Testserver 2'];
+  secretPassword = '';
+  hiddenMessage = 'tuna';
 
   constructor() {
     setTimeout(() => {
@@ -45,5 +47,10 @@ export class ServersComponent implements OnInit {
   resetFrom() {
     this.userName = '';
     this.allowUserNameReset = false;
+  }
+  clickedButton() {
+    if (this.secretPassword === 'clicked') {
+      this.hiddenMessage = '';
+    }
   }
 }
