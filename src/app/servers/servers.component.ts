@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { takeUntil } from 'rxjs';
 
 @Component({
   // selector: '[app-servers]',
@@ -17,8 +18,8 @@ export class ServersComponent implements OnInit {
   allowUserNameReset = false;
   serverCreated = false;
   servers = ['Testserver', 'Testserver 2'];
-  secretPassword = '';
-  hiddenMessage = 'tuna';
+  secretPassword = 'tuna';
+  showPassword = false;
 
   constructor() {
     setTimeout(() => {
@@ -49,8 +50,6 @@ export class ServersComponent implements OnInit {
     this.allowUserNameReset = false;
   }
   clickedButton() {
-    if (this.secretPassword === 'clicked') {
-      this.hiddenMessage = '';
-    }
+    this.showPassword = true;
   }
 }
