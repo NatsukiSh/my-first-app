@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { takeUntil } from 'rxjs';
+import * as moment from 'moment';
 
 @Component({
   // selector: '[app-servers]',
@@ -51,5 +52,17 @@ export class ServersComponent implements OnInit {
   }
   clickedButton() {
     this.showPassword = true;
+  }
+}
+export class MomentDemo {
+  test() {
+    const date = moment();
+    let dateInFormat = date.format('DD.MM.YYYY HH:mm:ss');
+    console.log(dateInFormat);
+  }
+
+  localeTest() {
+    console.log(moment.locale()); // en
+    moment.locale('en');
   }
 }
