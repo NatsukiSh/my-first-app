@@ -21,6 +21,8 @@ export class ServersComponent implements OnInit {
   servers = ['Testserver', 'Testserver 2'];
   secretPassword = 'tuna';
   showPassword = false;
+  showCurrentTime = false;
+  currentTime = moment('DD.MM.YYYY HH:mm:ss');
 
   constructor() {
     setTimeout(() => {
@@ -52,6 +54,7 @@ export class ServersComponent implements OnInit {
   }
   clickedButton() {
     this.showPassword = true;
+    this.showCurrentTime = true;
   }
 }
 export class MomentDemo {
@@ -62,7 +65,7 @@ export class MomentDemo {
   }
 
   localeTest() {
-    console.log(moment.locale()); // en
+    console.log(moment.locale());
     moment.locale('en');
   }
 }
