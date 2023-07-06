@@ -41,8 +41,8 @@
 <div class="container">
   <div
     class="number-display"
-    [ngStyle]="{ backgroundColor: 'blue' }"
-    [ngClass]="{ white: toggle }"
+    [ngStyle]="{ backgroundColor: counter >= 5 ? 'blue' : 'transparent' }"
+    [ngClass]="{ white: counter >= 5 }"
   >
     {{ counter }}
   </div>
