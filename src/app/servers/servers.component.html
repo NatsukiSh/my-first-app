@@ -39,7 +39,11 @@
 <p *ngIf="showPassword">{{ secretPassword }}</p>
 <p *ngIf="showCurrentTime">{{ currentTime }}</p>
 <div class="container">
-  <div class="number-display">
+  <div
+    class="number-display"
+    [ngStyle]="{ backgroundColor: 'blue' }"
+    [ngClass]="{ white: toggle }"
+  >
     {{ counter }}
   </div>
 </div>

@@ -23,6 +23,7 @@ export class ServersComponent implements OnInit {
   showPassword = false;
   showCurrentTime = false;
   currentTime = moment();
+  toggle = true;
 
   constructor() {
     setTimeout(() => {
