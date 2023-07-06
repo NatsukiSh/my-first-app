@@ -22,13 +22,14 @@ export class ServersComponent implements OnInit {
   secretPassword = 'tuna';
   showPassword = false;
   showCurrentTime = false;
-  currentTime = moment('DD.MM.YYYY HH:mm:ss');
+  currentTime = moment();
 
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
   }
+  counter = 0;
 
   ngOnInit() {}
 
@@ -55,13 +56,16 @@ export class ServersComponent implements OnInit {
   clickedButton() {
     this.showPassword = true;
     this.showCurrentTime = true;
+    this.counter++;
   }
 }
 export class MomentDemo {
+  secretPassword = 'tuna';
+
   test() {
     const date = moment();
-    let dateInFormat = date.format('DD.MM.YYYY HH:mm:ss');
-    console.log(dateInFormat);
+    let time = new Date('DD.MM.YYYY HH:mm:ss');
+    return `${date} ${time}`;
   }
 
   localeTest() {
